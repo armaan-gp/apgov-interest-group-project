@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMA Flyer — Campus Reuse Challenge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    @page { size: letter; margin: 0; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Inter", system-ui, sans-serif; background: #e9eee9; color: #1d2a24; }
+    .toolbar { display: flex; gap: 10px; justify-content: center; align-items: center; flex-wrap: wrap; padding: 16px; }
+    .toolbar button, .toolbar a {
+      padding: 10px 18px; border-radius: 999px; border: 0; background: #0f8b8d; color: #fff;
+      font: inherit; font-weight: 700; cursor: pointer; text-decoration: none;
+    }
+    .toolbar a { background: #0f3d2e; }
+    .toolbar p { width: 100%; text-align: center; margin: 4px 0 0; font-size: 0.85rem; color: #5a6b63; }
+
+    .page {
+      width: 8.5in; height: 11in; margin: 0 auto 24px; background: #faf7f0; overflow: hidden;
+      display: flex; flex-direction: column; box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+    .top {
+      background: linear-gradient(160deg, #0f3d2e 0%, #1a5c44 60%, #0b6e70 100%);
+      color: #fff; padding: 0.6in 0.6in 0.5in;
+    }
+    .badge { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: #9fd8c4; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; }
+    .badge b { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: #0f8b8d; color: #fff; letter-spacing: 0.04em; }
+    h1 { font-size: 64px; line-height: 1; margin: 22px 0 14px; letter-spacing: -0.02em; }
+    .top p { font-size: 18px; margin: 0; color: #d6e8df; max-width: 6in; }
+
+    .body { padding: 0.45in 0.6in; flex: 1; display: flex; flex-direction: column; gap: 22px; }
+    .invite { font-size: 30px; font-weight: 800; color: #0f3d2e; line-height: 1.15; margin: 0; }
+    .invite span { color: #0f8b8d; }
+    .stat { display: flex; gap: 18px; align-items: center; padding: 16px 20px; border-radius: 14px; background: #e3efe8; }
+    .stat strong { font-size: 44px; color: #0f3d2e; line-height: 1; }
+    .stat p { margin: 0; font-size: 15px; }
+    .stat small { color: #5a6b63; }
+
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .step { padding: 14px 16px; border-radius: 12px; border: 2px solid #d9e2dc; background: #fff; }
+    .step b { display: block; color: #0f8b8d; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .step span { font-size: 15px; font-weight: 600; }
+
+    .roles { font-size: 15px; margin: 0; }
+    .roles b { color: #0f3d2e; }
+
+    .bottom { display: flex; gap: 24px; align-items: center; margin-top: auto; padding: 20px; border-radius: 16px; background: #0f3d2e; color: #fff; }
+    .qr { flex: none; background: #fff; padding: 10px; border-radius: 10px; width: 150px; height: 150px; display: grid; place-items: center; }
+    .qr img, .qr canvas { width: 130px !important; height: 130px !important; }
+    .bottom h2 { margin: 0 0 6px; font-size: 24px; }
+    .bottom p { margin: 0; color: #d6e8df; font-size: 15px; }
+    .url { margin-top: 8px !important; color: #9fd8c4 !important; font-weight: 700; word-break: break-all; }
+    .disclaimer { text-align: center; font-size: 10px; color: #5a6b63; padding: 0 0.6in 0.3in; }
+
+    @media print {
+      body { background: #fff; }
+      .toolbar { display: none; }
+      .page { margin: 0; box-shadow: none; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    @media screen and (max-width: 8.6in) {
+      .page { transform-origin: top left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button onclick="window.print()">Print / Save as PDF</button>
+    <a href="index.html#campus">← Back to website</a>
+    <p id="qr-note"></p>
+  </div>
+
+  <div class="page">
+    <div class="top">
+      <div class="badge"><b>SMA</b> Sustainable Materials Alliance</div>
+      <h1>Progress<br>Beyond Plastic</h1>
+      <p>We advance sustainable materials, practical reuse systems, and effective recycling technologies through education and public policy.</p>
+    </div>
+
+    <div class="body">
+      <p class="invite">Join the <span>Campus Reuse Challenge</span> — help your campus measure its plastic waste and test a better way.</p>
+
+      <div class="stat">
+        <strong>8.7%</strong>
+        <p>of the 35.7 million tons of plastic in U.S. municipal solid waste was recycled in 2018.<br><small>Source: U.S. EPA</small></p>
+      </div>
+
+      <div class="steps">
+        <div class="step"><b>1 · Measure</b><span>Run an authorized dining-area waste audit</span></div>
+        <div class="step"><b>2 · Develop</b><span>Propose a reusable-container pilot</span></div>
+        <div class="step"><b>3 · Advocate</b><span>Take the evidence to campus leaders &amp; Congress</span></div>
+      </div>
+
+      <p class="roles"><b>Find your role:</b> research &amp; data collection · events &amp; outreach · design &amp; communications · policy &amp; advocacy. Small time commitments, real results.</p>
+
+      <div class="bottom">
+        <div class="qr" id="qr"></div>
+        <div>
+          <h2>Scan to get involved</h2>
+          <p>Learn about our policy agenda, copy our advocacy letter, and sign up for the challenge.</p>
+          <p class="url" id="site-url"></p>
+        </div>
+      </div>
+    </div>
+    <div class="disclaimer">Created for an AP Government classroom project. Sustainable Materials Alliance is a fictional interest group.</div>
+  </div>
+
+  <script>
+    // QR points to the Campus section of the live site. Override with ?url=https://your-site/ if needed.
+    const params = new URLSearchParams(location.search);
+    const base = params.get("url") || location.href.replace(/flyer\.html.*$/, "");
+    const target = base.replace(/\/?$/, "/") + "#campus";
+    document.getElementById("site-url").textContent = target.replace(/^https?:\/\//, "");
+    new QRCode(document.getElementById("qr"), { text: target, width: 260, height: 260, colorDark: "#0f3d2e", colorLight: "#ffffff" });
+    if (location.protocol === "file:" && !params.get("url")) {
+      document.getElementById("qr-note").textContent =
+        "Heads up: you're viewing a local file, so the QR code points to your computer. Open this flyer from the hosted website before printing.";
+    }
+  </script>
+</body>
+</html>
