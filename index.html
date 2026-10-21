@@ -7,467 +7,444 @@
   <meta name="description" content="The Sustainable Materials Alliance (SMA) advances sustainable materials, practical reuse systems, and effective recycling technologies through education and public policy.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f8b8d'/%3E%3Ctext x='32' y='41' font-family='Arial' font-weight='800' font-size='22' fill='white' text-anchor='middle'%3ESMA%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231d3a2b'/%3E%3Ccircle cx='46' cy='18' r='8' fill='%23d7f24a'/%3E%3Ctext x='10' y='50' font-family='Georgia' font-size='30' fill='white'%3ES%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
-<!-- ================= NAV ================= -->
-<nav class="nav" aria-label="Main">
-  <div class="container">
-    <a href="#top" class="brand" aria-label="Back to top">
-      <span class="brand-mark">SMA</span>
-      <span class="brand-name">Sustainable Materials Alliance</span>
-    </a>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-    <ul class="nav-links">
-      <li><a href="#problem">The Problem</a></li>
-      <li><a href="#solutions">Solutions</a></li>
-      <li><a href="#policy">Policy</a></li>
-      <li><a href="#support">Support</a></li>
-      <li><a href="#campus">Campus</a></li>
-      <li><a href="#action">Take Action</a></li>
-    </ul>
-  </div>
+<nav class="nav" id="nav" aria-label="Main">
+  <a href="#top" class="brand" aria-label="Back to top"><b>SMA</b><span>Sustainable Materials Alliance</span></a>
+  <button class="nav-toggle" aria-expanded="false">Menu</button>
+  <ul class="nav-links">
+    <li><a href="#problem"><i>01</i>Problem</a></li>
+    <li><a href="#solutions"><i>02</i>Solutions</a></li>
+    <li><a href="#policy"><i>03</i>Policy</a></li>
+    <li><a href="#support"><i>04</i>Support</a></li>
+    <li><a href="#campus"><i>05</i>Campus</a></li>
+    <li><a href="#action"><i>06</i>Take Action</a></li>
+  </ul>
 </nav>
 
 <main>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="top">
-  <div class="container">
-    <div class="hero-grid">
+<!-- ============ HERO ============ -->
+<header class="hero" id="top" data-section>
+  <img src="images/bales.jpg" alt="Compressed bales of used plastic bottles stacked at a recycling yard">
+  <p class="caption">Bales of crushed PET bottles awaiting processing.<br>Photo: Grendelkhan, CC BY-SA 4.0</p>
+  <div class="hero-inner">
+    <span class="label" style="color:#d7f24a">Sustainable Materials Alliance · Est. 2026</span>
+    <h1 style="margin-top:18px">Progress<br><em>beyond</em> plastic.</h1>
+    <div class="hero-bottom">
+      <p>We advance sustainable materials, practical reuse systems, and effective recycling technologies — through education and public policy.</p>
+      <div class="btn-row">
+        <a href="#solutions" class="btn">Explore our solutions <span class="arrow">↓</span></a>
+        <a href="#campus" class="btn btn-signal">Join the Campus Reuse Challenge</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span><b>35.7M tons</b> of plastic in U.S. municipal solid waste — EPA, 2018</span>
+    <span>Only <b>8.7%</b> was recycled</span>
+    <span>Entanglement harms seals, sea turtles &amp; seabirds — NOAA</span>
+    <span>Our ask: <b>fund research · test on campuses · require results</b></span>
+    <span><b>35.7M tons</b> of plastic in U.S. municipal solid waste — EPA, 2018</span>
+    <span>Only <b>8.7%</b> was recycled</span>
+    <span>Entanglement harms seals, sea turtles &amp; seabirds — NOAA</span>
+    <span>Our ask: <b>fund research · test on campuses · require results</b></span>
+  </div>
+</div>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="manifesto">
+  <div class="wrap manifesto-grid">
+    <p class="reveal">We're a public-interest environmental group that believes the fix for plastic waste is <span class="mark">better technology</span> — and public policy that <em class="serif-i">pays for proof</em>.</p>
+    <ul class="pillars reveal">
+      <li><span class="n">01</span><div><b>Develop better materials</b>Packaging that uses fewer resources and is easier to recover.</div></li>
+      <li><span class="n">02</span><div><b>Make reuse practical</b>Campus and community trials of convenient alternatives.</div></li>
+      <li><span class="n">03</span><div><b>Fund measurable progress</b>Public investment tied to independently evaluated results.</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 01 PROBLEM ============ -->
+<section class="section" id="problem" data-section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num"><b>01</b>The Problem</div>
       <div>
-        <p class="hero-tag">Sustainable Materials Alliance</p>
-        <h1>Progress Beyond Plastic</h1>
-        <p class="lead">The Sustainable Materials Alliance advances sustainable materials, practical reuse systems, and effective recycling technologies through education and public policy.</p>
-        <div class="btn-row">
-          <a href="#solutions" class="btn btn-light">Explore Our Solutions</a>
-          <a href="#campus" class="btn btn-outline-light">Join the Campus Reuse Challenge</a>
+        <h2 class="h-lg">Everyday convenience creates a lasting waste challenge.</h2>
+      </div>
+    </div>
+
+    <div class="problem-grid">
+      <div class="stat-sticky reveal">
+        <span class="label">U.S. plastic in municipal solid waste, 2018</span>
+        <div class="stat-num" style="margin-top:14px">8.7<sup>%</sup></div>
+        <p class="stat-sub">recycled — out of <strong>35.7 million tons</strong> generated.</p>
+        <div class="waffle" id="waffle" role="img" aria-label="100 squares, 9 filled: about 9 percent recycled"></div>
+        <div class="waffle-key label"><span><i style="background:var(--ink)"></i>Recycled</span><span><i style="background:var(--rule)"></i>Not recycled</span></div>
+        <details style="margin-top:24px">
+          <summary>What this number measures</summary>
+          <div class="det-body">
+            <p>EPA's most recent national figures for plastic in <em>municipal solid waste</em> — trash and recycling from homes, schools, and businesses. They're historical (2018), not a measure of all plastic production or today's recycling rate. Most non-recycled plastic was landfilled or burned for energy; it didn't all reach the environment.</p>
+            <a href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/plastics-material-specific-data" target="_blank" rel="noopener">EPA plastics data ↗</a>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem-body">
+        <figure class="reveal">
+          <img src="images/monkseal.jpg" alt="A Hawaiian monk seal on a beach with derelict fishing net wrapped around its neck">
+          <figcaption class="caption">An endangered Hawaiian monk seal entangled in derelict net. Photo: NOAA Fisheries (Permit #10137), public domain.</figcaption>
+        </figure>
+        <div class="block reveal">
+          <span class="label">Wildlife</span>
+          <h3>It doesn't stay where we throw it.</h3>
+          <p>NOAA documents how plastic bags, packing bands, and other marine debris entangle animals — restricting movement and feeding, and potentially causing injury or death.</p>
+          <a href="https://marinedebris.noaa.gov/why-marine-debris-problem/wildlife-entanglement-and-ghost-fishing" target="_blank" rel="noopener">NOAA Marine Debris Program ↗</a>
+        </div>
+        <div class="block reveal">
+          <span class="label">Campus</span>
+          <h3>It's in our dining halls.</h3>
+          <p>Disposable dining containers, beverage bottles, utensils, and delivery packaging connect this national problem to everyday student life. Campus dining and purchasing decisions are also the perfect place to test what works instead.</p>
+        </div>
+        <div class="block reveal">
+          <span class="label">Priority</span>
+          <h3>Prevention first.</h3>
+          <p>Reducing unnecessary disposal limits the amount of material that needs collection, processing, or cleanup in the first place.</p>
         </div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <!-- Container → return station → research lab -->
-        <svg viewBox="0 0 420 260" width="100%" role="img">
-          <defs>
-            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-              <path d="M0,0 L10,5 L0,10 z" fill="#9fd8c4"/>
-            </marker>
-          </defs>
-          <!-- reusable container -->
-          <g transform="translate(20,70)">
-            <circle cx="50" cy="50" r="50" fill="rgba(255,255,255,0.12)"/>
-            <rect x="22" y="40" width="56" height="34" rx="6" fill="#9fd8c4"/>
-            <rect x="18" y="32" width="64" height="10" rx="4" fill="#ffffff"/>
-            <path d="M40 57 a10 10 0 1 1 20 0" stroke="#0f3d2e" stroke-width="3" fill="none"/>
-            <text x="50" y="125" fill="#ffffff" font-size="14" font-weight="700" text-anchor="middle" font-family="Inter, sans-serif">Reuse</text>
-          </g>
-          <!-- return station -->
-          <g transform="translate(160,70)">
-            <circle cx="50" cy="50" r="50" fill="rgba(255,255,255,0.12)"/>
-            <rect x="26" y="20" width="48" height="62" rx="6" fill="#ffffff"/>
-            <rect x="34" y="30" width="32" height="10" rx="2" fill="#0f8b8d"/>
-            <rect x="34" y="48" width="32" height="24" rx="3" fill="#0f3d2e"/>
-            <path d="M44 60 h12 M50 54 v12" stroke="#9fd8c4" stroke-width="3"/>
-            <text x="50" y="125" fill="#ffffff" font-size="14" font-weight="700" text-anchor="middle" font-family="Inter, sans-serif">Return</text>
-          </g>
-          <!-- research lab -->
-          <g transform="translate(300,70)">
-            <circle cx="50" cy="50" r="50" fill="rgba(255,255,255,0.12)"/>
-            <path d="M42 22 h16 M45 22 v22 L30 74 a6 6 0 0 0 5 8 h30 a6 6 0 0 0 5 -8 L55 44 V22" fill="#ffffff" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M36 66 h28 l4 8 a4 4 0 0 1 -4 5 H36 a4 4 0 0 1 -4 -5 z" fill="#0f8b8d"/>
-            <text x="50" y="125" fill="#ffffff" font-size="14" font-weight="700" text-anchor="middle" font-family="Inter, sans-serif">Research</text>
-          </g>
-          <line x1="124" y1="120" x2="156" y2="120" stroke="#9fd8c4" stroke-width="3" marker-end="url(#arrow)"/>
-          <line x1="264" y1="120" x2="296" y2="120" stroke="#9fd8c4" stroke-width="3" marker-end="url(#arrow)"/>
-          <path d="M350 60 C 330 0, 90 0, 70 60" stroke="#9fd8c4" stroke-width="2" stroke-dasharray="6 6" fill="none" marker-end="url(#arrow)"/>
-          <text x="210" y="24" fill="#d6e8df" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">evidence improves the next design</text>
-        </svg>
-      </div>
-    </div>
-
-    <div class="approach grid-3">
-      <div class="card reveal">
-        <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v6L4 19a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3L14 9V3"/></svg></div>
-        <h3>Develop better materials</h3>
-        <p>Support research into packaging that uses fewer resources and is easier to recover.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></div>
-        <h3>Make reuse practical</h3>
-        <p>Help campuses and communities test convenient alternatives to disposable products.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
-        <h3>Fund measurable progress</h3>
-        <p>Advocate public investment tied to independently evaluated results.</p>
-      </div>
-    </div>
-
-    <div class="who reveal">
-      <strong>Who we are:</strong> SMA is a <strong>public-interest environmental interest group with a technology focus</strong>. We believe sustainable technologies become more effective when public policy supports their development, testing, and adoption.
     </div>
   </div>
 </section>
 
-<!-- ================= PROBLEM ================= -->
-<section id="problem">
-  <div class="container">
-    <span class="eyebrow">The Problem</span>
-    <h2>Everyday convenience creates a lasting waste challenge</h2>
-    <p class="lead">Dining containers, drink bottles, utensils, and delivery packaging are used for minutes — and then become a waste problem that someone else has to handle.</p>
+<section class="band" aria-label="Why government has a role">
+  <img src="images/beach.jpg" alt="Plastic fragments and debris scattered across a dark volcanic beach">
+  <div class="wrap">
+    <div class="band-quote reveal">
+      <span class="label">AP Gov · Why government has a role</span>
+      <p class="big">Plastic pollution is a <em class="serif-i">negative externality</em> — its costs land on people who never bought the product.</p>
+      <p class="small">Communities and ecosystems pay for waste they didn't create. That's why SMA supports public investment in research, shared infrastructure, and environmental protection that individual consumers and businesses won't fully finance on their own.</p>
+      <p class="caption">Beach debris in Tenerife. Photo: Marek Ślusarczyk (Tupungato), CC BY 3.0</p>
+    </div>
+  </div>
+</section>
 
-    <div class="stat-block">
-      <div class="reveal">
-        <div class="big-stat">35.7M <small>tons</small></div>
-        <p style="margin-top:10px">of plastic in U.S. municipal solid waste in 2018. <strong>Only 8.7% was recycled.</strong></p>
-        <span class="source-tag">Source: U.S. EPA, 2018 data</span>
-        <details>
-          <summary>What does this statistic measure?</summary>
-          <p>These are EPA's most recent national figures for plastics in <em>municipal solid waste</em> — the trash and recycling from homes, schools, and businesses. They are historical (2018) numbers, not a measurement of all plastic production or of today's recycling rate. Plastic that wasn't recycled was mostly landfilled or burned for energy; it did not all enter the environment.</p>
-          <p><a href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/plastics-material-specific-data" target="_blank" rel="noopener">View EPA's plastics data ↗</a></p>
-        </details>
+<!-- ============ 02 SOLUTIONS ============ -->
+<section class="section" id="solutions" data-section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num"><b>02</b>Our Solutions</div>
+      <div>
+        <h2 class="h-lg">Better design. Practical reuse. Effective recovery.</h2>
+        <p class="intro">We back technologies on performance, not marketing claims. Every solution has to prove itself with numbers.</p>
       </div>
-      <div class="reveal">
-        <p class="waffle-caption">U.S. plastic municipal solid waste, 2018 — each square = 1%</p>
-        <div class="waffle" id="waffle" role="img" aria-label="Roughly 9 out of 100 squares highlighted: about 9 percent recycled, 91 percent not recycled"></div>
-        <div class="legend">
-          <span><i style="background:var(--teal)"></i>Recycled (~9%)</span>
-          <span><i style="background:#c9d3ce"></i>Not recycled (~91%)</span>
+    </div>
+
+    <div class="solutions">
+      <article class="solution reveal">
+        <div class="sol-img contain"><img src="images/reusable.jpg" alt="Stack of durable glass food containers with red lids"></div>
+        <div>
+          <span class="sol-num">A — Reuse</span>
+          <h3>Reusable dining systems</h3>
+          <p>Durable containers circulate through distribution, convenient return stations, washing, and repeated use — replacing thousands of single-use clamshells.</p>
+          <span class="label">We measure</span>
+          <ul class="chips"><li>Return rate</li><li>Reuse cycles</li><li>Washing needs</li><li>Operating cost</li><li>Disposables avoided</li></ul>
         </div>
-      </div>
+      </article>
+      <article class="solution reveal">
+        <div class="sol-img"><img src="images/lab.jpg" alt="A scientist working at a computer in a modern laboratory"></div>
+        <div>
+          <span class="sol-num">B — Design</span>
+          <h3>Improved material design</h3>
+          <p>Research into packaging that uses less material or is easier to recover after use — while staying affordable and actually working.</p>
+          <span class="label">We measure</span>
+          <ul class="chips"><li>Performance</li><li>Affordability</li><li>Environmental effects</li><li>Fits local infrastructure</li></ul>
+        </div>
+      </article>
+      <article class="solution reveal">
+        <div class="sol-img"><img src="images/sorting.jpg" alt="Industrial sorting machinery and conveyor belts inside a recycling facility"></div>
+        <div>
+          <span class="sol-num">C — Recovery</span>
+          <h3>Recycling improvements</h3>
+          <p>Better sorting and processing technologies that recover useful materials — supported only when independent evidence shows improved recovery at reasonable cost.</p>
+          <span class="label">We measure</span>
+          <ul class="chips"><li>Material recovered</li><li>Contamination</li><li>Energy use</li><li>Cost</li></ul>
+          <p class="caption">Photos: Rubbermaid Products (CC BY 2.0); Esculab (CC0); STEINERT (CC BY 4.0)</p>
+        </div>
+      </article>
     </div>
 
-    <div class="grid-2" style="margin-top:48px">
-      <div class="card reveal">
-        <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12c3-4 6-4 9 0s6 4 9 0"/><path d="M2 18c3-4 6-4 9 0s6 4 9 0"/><path d="M2 6c3-4 6-4 9 0s6 4 9 0"/></svg></div>
-        <h3>Harm to wildlife</h3>
-        <p>NOAA reports that plastic bags, packing bands, six-pack rings, and other marine debris can entangle animals — restricting movement and feeding and potentially causing injury or death.</p>
-        <p><a href="https://marinedebris.noaa.gov/why-marine-debris-problem/wildlife-entanglement-and-ghost-fishing" target="_blank" rel="noopener">NOAA Marine Debris Program ↗</a></p>
+    <div class="lifecycle reveal">
+      <span class="label">How SMA evaluates a solution</span>
+      <h3 class="h-md" style="margin-top:10px">We judge the whole life cycle — not just the label.</h3>
+      <div class="lc-steps">
+        <div>Production<small>materials &amp; energy</small></div>
+        <div>Transportation<small>weight &amp; distance</small></div>
+        <div>Use<small>does it actually work?</small></div>
+        <div>Disposal<small>can it be recovered?</small></div>
       </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10l9-6 9 6"/><path d="M5 10v9h14v-9"/><path d="M9 19v-5h6v5"/></svg></div>
-        <h3>It's on our campus, too</h3>
-        <p>Disposable dining containers, beverage bottles, utensils, and delivery packaging connect this national issue to everyday student life — and campus dining and purchasing decisions are a place to test real alternatives.</p>
-      </div>
-    </div>
-
-    <div class="gov-panel reveal">
-      <span class="eyebrow" style="color:#9fd8c4">AP Gov connection</span>
-      <h3>Why government has a role</h3>
-      <p>Plastic pollution is a <span class="term">negative externality</span>: its costs extend beyond a product's buyer and seller, falling on communities and ecosystems. Public policy can support research, shared infrastructure, and environmental protection that individual consumers or businesses may not fully finance.</p>
-      <details>
-        <summary>So what does SMA want?</summary>
-        <p>A combination of <strong>research support</strong>, <strong>practical demonstration projects</strong>, and <strong>public accountability for results</strong> — with a priority on preventing waste, since less disposal means less material to collect, process, or clean up.</p>
+      <details style="margin-top:24px">
+        <summary>Example: why "compostable" isn't automatically better</summary>
+        <div class="det-body">
+          <p>Commercially compostable plastic only breaks down in a commercial or industrial composting facility — not in a backyard bin or a landfill. EPA advises choosing it only where a local composting program actually accepts it. So we support compostable packaging only where that collection and processing exist.</p>
+          <a href="https://www.epa.gov/greenerproducts/identifying-sustainable-food-service-and-food-service-ware" target="_blank" rel="noopener">EPA guidance ↗</a>
+        </div>
       </details>
     </div>
   </div>
 </section>
 
-<!-- ================= SOLUTIONS ================= -->
-<section id="solutions">
-  <div class="container">
-    <span class="eyebrow">Our Solutions</span>
-    <h2>Better design. Practical reuse. Effective recovery.</h2>
-    <p class="lead">We support technologies based on performance, not marketing claims. Each solution has to prove itself with measurable results.</p>
-
-    <div class="grid-3" style="margin-top:32px">
-      <div class="card reveal">
-        <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="9" width="16" height="10" rx="2"/><path d="M3 9h18"/></svg></div>
-        <h3>Reusable dining systems</h3>
-        <p>Durable containers circulate through distribution, convenient return stations, washing, and repeated use.</p>
-        <details>
-          <summary>Measures of success</summary>
-          <p>Return rates, completed reuse cycles, washing requirements, operating costs, and disposable containers avoided.</p>
-        </details>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div>
-        <h3>Improved material design</h3>
-        <p>Packaging that uses less material or is designed for easier recovery after use — while staying affordable and practical.</p>
-        <details>
-          <summary>Measures of success</summary>
-          <p>Performance, durability, affordability, environmental effects, and compatibility with local collection and processing infrastructure.</p>
-        </details>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 19H4l3-5M17 19h3l-3-5M12 4l-2 3.5M12 4l2 3.5"/><path d="M7 19h10M5.5 14L10 7.5M18.5 14L14 7.5"/></svg></div>
-        <h3>Recycling improvements</h3>
-        <p>Better sorting and processing technologies that recover useful materials from collected waste.</p>
-        <details>
-          <summary>Measures of success</summary>
-          <p>Material recovered, contamination levels, energy requirements, and cost — supported only when independent evidence shows improved recovery at reasonable cost.</p>
-        </details>
+<!-- ============ 03 POLICY ============ -->
+<div class="policy-hero">
+  <img src="images/capitol.jpg" alt="The United States Capitol lit up at dusk">
+  <p class="caption">U.S. Capitol at dusk. Photo: Martin Falbisoner, CC BY-SA 3.0</p>
+</div>
+<section class="section dark" id="policy" data-section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num"><b>03</b>Policy Agenda</div>
+      <div>
+        <h2 class="h-lg">Three asks for Congress.</h2>
+        <p class="intro">Turning promising ideas into public policy — with accountability built in.</p>
       </div>
     </div>
 
-    <div class="callout reveal">
-      <h3>How SMA evaluates a solution</h3>
-      <p>Before endorsing a technology, we look at its <strong>whole life cycle</strong>: production → transportation → use → disposal. An alternative only earns our support if it produces an overall environmental benefit.</p>
-      <details>
-        <summary>Example: "compostable" plastic</summary>
-        <p>Commercially compostable plastic only breaks down in a commercial or industrial composting facility — not in a backyard bin or a landfill. EPA advises choosing it only where a local composting program actually accepts it. So SMA supports compostable packaging <strong>only where the right collection and processing exist</strong>.</p>
-        <p><a href="https://www.epa.gov/greenerproducts/identifying-sustainable-food-service-and-food-service-ware" target="_blank" rel="noopener">EPA guidance on food service ware ↗</a></p>
-      </details>
+    <ol class="asks">
+      <li class="ask reveal">
+        <div class="n">1</div>
+        <h3>Fund competitive research grants.</h3>
+        <div>
+          <p>For sustainable materials, reusable packaging systems, and recycling improvements. Universities, public research institutions, and qualified innovators compete with defined goals and evaluation criteria.</p>
+          <div class="who">Administered by: Department of Energy</div>
+        </div>
+      </li>
+      <li class="ask reveal">
+        <div class="n">2</div>
+        <h3>Test solutions on real campuses.</h3>
+        <div>
+          <p>Demonstration grants for limited campus and community pilots — like reusable dining containers paired with accessible return stations, with participation and waste reduction measured.</p>
+          <div class="who">Administered by: EPA</div>
+        </div>
+      </li>
+      <li class="ask reveal">
+        <div class="n">3</div>
+        <h3>Require results.</h3>
+        <div>
+          <p>Grant recipients report costs, participation, waste reduction, and environmental effects. Independent review decides whether a project keeps its funding.</p>
+          <div class="who">Applies to: every funded project</div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="deciders reveal">
+      <div><b>Congress</b><p>Authorizes programs and appropriates the money. The target of our lobbying.</p></div>
+      <div><b>Dept. of Energy</b><p>Would run technology-research grants under our proposal.</p></div>
+      <div><b>EPA</b><p>Would run waste-reduction demonstration grants under our proposal.</p></div>
     </div>
-  </div>
-</section>
-
-<!-- ================= POLICY ================= -->
-<section id="policy">
-  <div class="container">
-    <span class="eyebrow">Our Policy Agenda</span>
-    <h2>Turning promising ideas into public policy</h2>
-    <p class="lead">Three specific requests we bring to Congress.</p>
-
-    <div class="grid-3" style="margin-top:32px">
-      <div class="card reveal">
-        <span class="card-num">1</span>
-        <h3>Fund research</h3>
-        <p>Congress authorizes and funds <strong>competitive grants</strong> for sustainable materials, reuse systems, and effective recycling technologies. Universities, public research institutions, and qualified innovators compete with defined goals.</p>
-      </div>
-      <div class="card reveal">
-        <span class="card-num">2</span>
-        <h3>Test solutions in communities</h3>
-        <p><strong>Demonstration grants</strong> help campuses and communities test projects under real conditions — like reusable dining containers paired with accessible return stations.</p>
-      </div>
-      <div class="card reveal">
-        <span class="card-num">3</span>
-        <h3>Require results</h3>
-        <p>Funded projects report <strong>costs, participation, waste reduction, and environmental effects</strong>. Independent evaluation decides whether projects keep receiving support.</p>
-      </div>
-    </div>
-
-    <div class="card roles reveal">
-      <h3>Who makes these decisions?</h3>
-      <div class="grid-3" style="margin-top:16px">
-        <div class="role"><span class="role-badge">Congress</span><p>Authorizes programs and appropriates the funding — the target of our lobbying.</p></div>
-        <div class="role"><span class="role-badge">DOE</span><p>Department of Energy would administer technology-research grants.</p></div>
-        <div class="role"><span class="role-badge">EPA</span><p>Would administer waste-reduction demonstration grants.</p></div>
-      </div>
-      <p class="label-note" style="margin-top:14px">Agency assignments are SMA's proposed framework, not an existing legislative package. Limited trials and performance requirements address concerns about public spending.</p>
-    </div>
-
-    <div class="btn-row">
-      <a href="policy-brief.html" target="_blank" class="btn btn-primary">Read Our Policy Brief</a>
+    <p class="fine">Agency roles are SMA's proposed framework, not an existing legislative package. Limited trials and performance requirements answer concerns about public spending: money continues only where results are demonstrated.</p>
+    <div class="btn-row" style="margin-top:28px">
+      <a href="policy-brief.html" target="_blank" class="btn btn-signal">Read our policy brief <span class="arrow">↗</span></a>
     </div>
   </div>
 </section>
 
-<!-- ================= SUPPORT ================= -->
-<section id="support">
-  <div class="container">
-    <span class="eyebrow">Support Our Work</span>
-    <h2>A practical budget for a growing organization</h2>
-
-    <div class="goal-banner reveal">
-      <strong>$2,000</strong>
-      <span>Proposed first-semester fundraising goal</span>
+<!-- ============ 04 SUPPORT ============ -->
+<section class="section" id="support" data-section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num"><b>04</b>Support Our Work</div>
+      <div>
+        <h2 class="h-lg">A practical budget for a growing organization.</h2>
+      </div>
     </div>
 
-    <div class="grid-2">
-      <div class="card reveal">
-        <h3>Where the money comes from</h3>
-        <div class="bar-list" data-total="2000">
-          <div class="bar-row">
-            <span>Individual donations <br><small style="color:var(--muted)">~100 gifts averaging $10 via website, social media &amp; campus outreach</small></span>
-            <span class="amount">$1,000</span>
-            <div class="bar-track"><div class="bar-fill" data-value="1000"></div></div>
-          </div>
-          <div class="bar-row">
-            <span>Business sponsorships <br><small style="color:var(--muted)">4 mission-aligned businesses × $150</small></span>
-            <span class="amount">$600</span>
-            <div class="bar-track"><div class="bar-fill" data-value="600"></div></div>
-          </div>
-          <div class="bar-row">
-            <span>Campus sustainability showcase <br><small style="color:var(--muted)">net proceeds after event expenses</small></span>
-            <span class="amount">$400</span>
-            <div class="bar-track"><div class="bar-fill" data-value="400"></div></div>
-          </div>
+    <div class="ledger-grid">
+      <div class="reveal">
+        <span class="label">Proposed first-semester goal</span>
+        <div class="goal-figure" style="margin-top:10px">$2,000</div>
+        <span class="label" style="display:block;margin-top:36px">Where it goes</span>
+        <div class="stack" id="stack" role="img" aria-label="Spending: $700 demonstrations, $500 recruitment, $400 advocacy, $200 website, $200 reserves">
+          <div class="c1" data-value="700"></div><div class="c2" data-value="500"></div><div class="c3" data-value="400"></div><div class="c4" data-value="200"></div><div class="c5" data-value="200"></div>
+        </div>
+        <ul class="stack-key">
+          <li><i class="c1"></i>Educational demonstrations<b>$700</b></li>
+          <li><i class="c2"></i>Recruitment &amp; printed materials<b>$500</b></li>
+          <li><i class="c3"></i>Policy research &amp; local advocacy travel<b>$400</b></li>
+          <li><i class="c4"></i>Website &amp; administration<b>$200</b></li>
+          <li><i class="c5"></i>Reserves<b>$200</b></li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <div class="ledger">
+          <h3>Income plan — Fall semester</h3>
+          <div class="row"><span>Individual donations<small>~100 gifts × $10 · web, social, campus</small></span><span class="lead"></span><span>$1,000</span></div>
+          <div class="row"><span>Business sponsorships<small>4 mission-aligned businesses × $150</small></span><span class="lead"></span><span>$600</span></div>
+          <div class="row"><span>Sustainability showcase<small>net proceeds after event costs</small></span><span class="lead"></span><span>$400</span></div>
+          <div class="row total"><span>Total</span><span class="lead"></span><span>$2,000</span></div>
+        </div>
+        <div class="pledge">
+          <p><strong>Our transparency rule:</strong> sponsors get acknowledgment — never control over our policy positions or research conclusions. We publish a financial summary of everything raised and spent.</p>
+          <p style="color:var(--ink-2);font-size:0.95rem">This budget pays for advocacy, education, and recruitment. The federal grants we propose would separately fund research and implementation.</p>
+          <button class="btn btn-ink" id="donate-demo" type="button">Donate</button>
+          <p class="demo-note" id="donate-msg" hidden>Classroom demo only — this site doesn't collect payments or personal information.</p>
         </div>
       </div>
-
-      <div class="card reveal">
-        <h3>How we'd spend it</h3>
-        <details open>
-          <summary>View the budget</summary>
-          <div class="bar-list" data-total="2000">
-            <div class="bar-row"><span>Educational demonstrations</span><span class="amount">$700</span><div class="bar-track"><div class="bar-fill alt" data-value="700"></div></div></div>
-            <div class="bar-row"><span>Recruitment &amp; printed materials</span><span class="amount">$500</span><div class="bar-track"><div class="bar-fill alt" data-value="500"></div></div></div>
-            <div class="bar-row"><span>Policy research &amp; local advocacy travel</span><span class="amount">$400</span><div class="bar-track"><div class="bar-fill alt" data-value="400"></div></div></div>
-            <div class="bar-row"><span>Website &amp; administration</span><span class="amount">$200</span><div class="bar-track"><div class="bar-fill alt" data-value="200"></div></div></div>
-            <div class="bar-row"><span>Reserves</span><span class="amount">$200</span><div class="bar-track"><div class="bar-fill alt" data-value="200"></div></div></div>
-          </div>
-        </details>
-      </div>
-    </div>
-
-    <div class="callout reveal">
-      <h3>Our transparency commitment</h3>
-      <p>Sponsors receive acknowledgment — <strong>never control</strong> over SMA's policy positions or research conclusions. We'll publish a financial summary of fundraising totals, sponsorships, and spending. This budget funds advocacy, education, and recruitment; the federal grants we propose would separately fund research and implementation.</p>
-      <div class="btn-row" style="margin-top:8px">
-        <button class="btn btn-primary" id="donate-demo" type="button">Donate (demo)</button>
-      </div>
-      <p class="demo-note" id="donate-msg" hidden>Classroom demonstration only — this site does not collect payments or personal information.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= CAMPUS ================= -->
-<section id="campus">
-  <div class="container">
-    <span class="eyebrow">The Campus Reuse Challenge</span>
-    <h2>Start with one campus. Build evidence for wider change.</h2>
-    <p class="lead">We recruit through student-commons tables, campus social media, printed flyers, and partnerships with environmental clubs, engineering and science organizations, student government, and campus sustainability offices.</p>
-
-    <div class="steps">
-      <div class="card step reveal">
-        <h3>Measure</h3>
-        <p>Conduct an <strong>authorized</strong> dining-area waste audit to establish a baseline of campus plastic use.</p>
-      </div>
-      <div class="card step reveal">
-        <h3>Develop</h3>
-        <p>Use the findings to propose a reusable-container pilot with accessible return stations.</p>
-      </div>
-      <div class="card step reveal">
-        <h3>Advocate</h3>
-        <p>Share results with campus leaders and use the evidence to support our policy requests to Congress.</p>
-      </div>
-    </div>
-
-    <h3 style="margin-top:48px">Find your role</h3>
-    <div class="grid-4 roles-grid">
-      <div class="card reveal">
-        <strong>Research &amp; data</strong>
-        <details><summary>Details</summary><p>Help run the waste audit, count containers, and track reuse data.</p></details>
-      </div>
-      <div class="card reveal">
-        <strong>Events &amp; outreach</strong>
-        <details><summary>Details</summary><p>Staff the commons table, plan the kickoff meeting and sustainability showcase.</p></details>
-      </div>
-      <div class="card reveal">
-        <strong>Design &amp; comms</strong>
-        <details><summary>Details</summary><p>Create flyers, social posts, and educational displays.</p></details>
-      </div>
-      <div class="card reveal">
-        <strong>Policy &amp; advocacy</strong>
-        <details><summary>Details</summary><p>Draft letters, prepare for congressional-office meetings, and attend town halls.</p></details>
-      </div>
-    </div>
-
-    <p class="label-note" style="margin-top:16px">Manageable commitments and regular progress updates help overcome the <strong>collective-action problem</strong> — where people benefit from environmental improvements without contributing to the effort. Kickoff date and location will be posted once confirmed.</p>
-
-    <div class="flyer-preview reveal">
+<!-- ============ 05 CAMPUS ============ -->
+<section class="section" id="campus" data-section style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num"><b>05</b>Campus Reuse Challenge</div>
       <div>
-        <h3>Get the flyer</h3>
-        <p style="margin:0">Our recruitment flyer includes the mission, the Campus Reuse Challenge invitation, and a QR code that opens this page.</p>
+        <h2 class="h-lg">Start with one campus. Build evidence for wider change.</h2>
+        <p class="intro">We recruit at student-commons tables, on campus social media, with printed flyers, and through environmental clubs, engineering and science groups, student government, and sustainability offices.</p>
       </div>
-      <a href="flyer.html" target="_blank" class="btn btn-light">Download Our Flyer</a>
+    </div>
+
+    <div class="campus-grid">
+      <figure class="campus-photo reveal" style="margin:0">
+        <img src="images/campus.jpg" alt="Overhead view of a busy student organization fair with booths in a university hall">
+        <figcaption class="caption">Student organization fair. Photo: Cybularny, CC0</figcaption>
+      </figure>
+      <ol class="steps reveal">
+        <li><span class="n">1</span><div><h3>Measure</h3><p>Run an <strong>authorized</strong> dining-area waste audit to set a baseline.</p></div></li>
+        <li><span class="n">2</span><div><h3>Develop</h3><p>Use the findings to propose a reusable-container pilot with easy return stations.</p></div></li>
+        <li><span class="n">3</span><div><h3>Advocate</h3><p>Bring the evidence to campus leaders — and to Congress.</p></div></li>
+      </ol>
+    </div>
+
+    <div class="roles-row">
+      <div class="reveal">
+        <span class="label">Find your role</span>
+        <h3 class="h-md" style="margin:10px 0 20px">Small commitments. Real results.</h3>
+        <details><summary>Research &amp; data collection</summary><div class="det-body">Help run the waste audit, count containers, and track reuse data.</div></details>
+        <details><summary>Events &amp; campus outreach</summary><div class="det-body">Staff the commons table and plan the kickoff meeting and sustainability showcase.</div></details>
+        <details><summary>Design &amp; communications</summary><div class="det-body">Create flyers, social posts, and educational displays.</div></details>
+        <details><summary>Policy research &amp; advocacy</summary><div class="det-body">Draft letters, prep for congressional-office meetings, and attend town halls.</div></details>
+        <p style="font-size:0.92rem;color:var(--ink-2);margin-top:20px">Defined roles and regular progress updates help beat the <strong>collective-action problem</strong> — where people enjoy environmental improvements without pitching in. Kickoff date and location will be posted once confirmed.</p>
+      </div>
+      <div class="flyer-wrap reveal">
+        <div class="flyer-mock" aria-hidden="true">
+          <div class="fm-img"></div>
+          <div class="fm-body">
+            <div class="fm-title">Progress <em>beyond</em> plastic.</div>
+            <div class="fm-sub">Join the Campus Reuse Challenge — Sustainable Materials Alliance</div>
+            <div class="fm-foot"><span>Scan to join →</span><span class="fm-qr"></span></div>
+          </div>
+        </div>
+        <div class="btn-row" style="justify-content:center;margin-top:36px">
+          <a href="flyer.html" target="_blank" class="btn btn-ink">Download our flyer <span class="arrow">↓</span></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ================= TAKE ACTION ================= -->
-<section id="action">
-  <div class="container">
-    <span class="eyebrow">Take Action</span>
-    <h2>Make sustainable innovation a policy priority</h2>
-    <p class="lead">How membership and public support become political influence.</p>
-
-    <div class="grid-3" style="margin-top:32px">
-      <div class="card reveal">
-        <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
-        <h3>Contact Congress</h3>
-        <p><strong>Grassroots lobbying:</strong> supporters send personalized letters and emails, attend town halls, and join district-office meetings.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5M10 20c0-3 3-5 6-5s6 2 6 5"/></svg></div>
-        <h3>Meet with policymakers</h3>
-        <p><strong>Direct lobbying:</strong> SMA requests congressional-office meetings and presents a concise policy brief with published evidence and campus findings.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12l3 3 5-6"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <h3>Build a coalition</h3>
-        <p>We seek prospective partners: university researchers, environmental organizations, campus sustainability offices, and credible sustainable-technology businesses.</p>
+<!-- ============ 06 TAKE ACTION ============ -->
+<section class="section" id="action" data-section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num"><b>06</b>Take Action</div>
+      <div>
+        <h2 class="h-lg">Make sustainable innovation a policy priority.</h2>
       </div>
     </div>
 
-    <h3 style="margin-top:48px">Sample advocacy letter</h3>
-    <p>Copy it, personalize it, and send it to your representative and senators.</p>
+    <div class="action-grid">
+      <figure class="reveal action-photo" style="margin:0">
+        <img src="images/townhall.jpg" alt="A wooden podium bearing the seal of the U.S. House of Representatives, set up for a town hall">
+        <figcaption class="caption">Set up for a congressional town hall. Photo: Fabrice Florin, CC BY-SA 2.0</figcaption>
+      </figure>
+      <div>
+        <ul class="tactics reveal">
+          <li><div><span class="label">Grassroots lobbying</span><h3>Contact Congress</h3></div><p>Members send personalized letters and emails, show up at town halls, and join district-office meetings — all asking for our three specific funding priorities.</p></li>
+          <li><div><span class="label">Direct lobbying</span><h3>Meet policymakers</h3></div><p>SMA requests congressional-office meetings and presents a concise policy brief combining published evidence with our campus findings.</p></li>
+          <li><div><span class="label">Coalition building</span><h3>Build a coalition</h3></div><p>Prospective partners: university researchers, environmental organizations, campus sustainability offices, and credible sustainable-tech businesses — each bringing expertise, implementation, or organizing experience.</p></li>
+        </ul>
+
 <div class="letter reveal" id="letter-text">Dear [Representative / Senator Name],
 
-I am a constituent from [City, State] and a supporter of the Sustainable Materials Alliance. I am writing about plastic waste. In 2018, the United States generated about 35.7 million tons of plastic in municipal solid waste, and only 8.7% was recycled.
+I am a constituent from [City, State] and a supporter of the Sustainable Materials Alliance. In 2018, the United States generated about 35.7 million tons of plastic in municipal solid waste, and only 8.7% was recycled.
 
 Please support competitive funding for sustainable-materials research and campus waste-reduction demonstrations, with independent evaluation and public reporting of results.
 
-Programs like these would let universities and communities test practical solutions — such as reusable dining-container systems — and would continue funding only the projects that show measurable results.
+Programs like these would let universities and communities test practical solutions — such as reusable dining-container systems — and keep funding only the projects that show measurable results.
 
-Thank you for your time and consideration.
+Thank you for your consideration.
 
 Sincerely,
 [Your Name]
 [Your Address]</div>
-    <div class="btn-row">
-      <button class="btn btn-primary" id="copy-letter" type="button">Copy Sample Letter</button>
-      <a class="btn btn-outline" href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener">Find Your Representative ↗</a>
-      <a class="btn btn-outline" href="https://www.senate.gov/senators/senators-contact.htm" target="_blank" rel="noopener">Find Your Senators ↗</a>
-      <span class="copy-status" id="copy-status" role="status"></span>
-    </div>
+        <div class="letter-actions">
+          <button class="btn btn-ink" id="copy-letter" type="button">Copy letter</button>
+          <a class="btn" href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener">Find your Representative ↗</a>
+          <a class="btn" href="https://www.senate.gov/senators/senators-contact.htm" target="_blank" rel="noopener">Find your Senators ↗</a>
+          <span class="copy-status" id="copy-status" role="status"></span>
+        </div>
 
-    <details class="card" style="margin-top:32px">
-      <summary>How we'll measure political success</summary>
-      <p>Substantive responses from congressional offices, meetings actually held, public expressions of support, and adoption of relevant funding or accountability provisions. Membership and petition totals measure <em>organizing activity</em>, not policy change — we report them separately.</p>
-    </details>
+        <details style="margin-top:40px">
+          <summary>How we'll measure political success</summary>
+          <div class="det-body">Substantive responses from congressional offices, meetings actually held, public statements of support, and adoption of relevant funding or accountability provisions. Membership and petition totals measure <em>organizing activity</em>, not policy change — we report them separately.</div>
+        </details>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ================= GOALS ================= -->
-<section id="goals">
-  <div class="container">
-    <span class="eyebrow">Our Goals</span>
-    <h2>First-semester targets</h2>
-
-    <div class="grid-4" style="margin-top:28px">
-      <div class="card goal-card reveal"><div class="goal-value">50</div><div class="goal-label">members recruited</div><div class="goal-tag">Proposed first-semester goal</div></div>
-      <div class="card goal-card reveal"><div class="goal-value">$2,000</div><div class="goal-label">raised</div><div class="goal-tag">Proposed first-semester goal</div></div>
-      <div class="card goal-card reveal"><div class="goal-value">1</div><div class="goal-label">authorized campus waste audit</div><div class="goal-tag">Proposed first-semester goal</div></div>
-      <div class="card goal-card reveal"><div class="goal-value">3</div><div class="goal-label">congressional offices sent meeting requests</div><div class="goal-tag">Proposed first-semester goal</div></div>
+<!-- ============ GOALS ============ -->
+<section class="section" id="goals" data-section style="padding-top:0">
+  <div class="wrap">
+    <span class="label">Proposed first-semester goals</span>
+    <div class="goals reveal" style="margin-top:16px">
+      <div><div class="g">50</div><p>members recruited</p></div>
+      <div><div class="g">$2K</div><p>raised for advocacy &amp; education</p></div>
+      <div><div class="g">1</div><p>authorized campus waste audit completed</p></div>
+      <div><div class="g">3</div><p>congressional offices sent meeting requests</p></div>
     </div>
-    <p class="label-note" style="margin-top:14px">Progress updates will distinguish meeting requests from meetings actually held, and organizational growth from policy outcomes.</p>
+    <p style="font-size:0.9rem;color:var(--muted);margin-top:14px">Progress reports will separate meeting <em>requests</em> from meetings actually held, and organizational growth from policy outcomes.</p>
+  </div>
+</section>
 
-    <div class="closing reveal">
-      <h2>Help turn sustainable innovation into practical change.</h2>
-      <p class="lead" style="margin-inline:auto;color:#d6e8df">Join the Campus Reuse Challenge.</p>
+<!-- ============ CLOSING ============ -->
+<section class="band closing" data-section aria-label="Join us">
+  <img src="images/seal.jpg" alt="Divers underwater beside a seal entangled in fishing net">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>Help turn sustainable innovation into <em>practical change.</em></h2>
       <div class="btn-row">
-        <a href="#campus" class="btn btn-light">Get Involved</a>
-        <a href="flyer.html" target="_blank" class="btn btn-outline-light">Download Flyer</a>
+        <a href="#campus" class="btn btn-signal">Join the Campus Reuse Challenge</a>
+        <a href="flyer.html" target="_blank" class="btn">Get the flyer</a>
       </div>
-      <p style="margin:28px 0 0;font-size:1.4rem;font-weight:800">Progress Beyond Plastic.</p>
+      <p class="caption" style="margin-top:28px">Divers reach a seal entangled in fishing net. Photo: NOAA Marine Debris Program, public domain.</p>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- ================= FOOTER ================= -->
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h4>Sustainable Materials Alliance</h4>
-        <p>Progress Beyond Plastic. Advancing sustainable materials, practical reuse systems, and effective recycling technologies through education and public policy.</p>
-      </div>
+  <div class="wrap">
+    <div class="big">Progress beyond plastic.</div>
+    <div class="foot-grid">
       <div>
         <h4>Navigate</h4>
         <ul>
-          <li><a href="#problem">The Problem</a></li>
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#policy">Policy</a></li>
-          <li><a href="#support">Support</a></li>
-          <li><a href="#campus">Campus</a></li>
-          <li><a href="#action">Take Action</a></li>
-          <li><a href="flyer.html" target="_blank">Flyer</a> · <a href="policy-brief.html" target="_blank">Policy Brief</a></li>
+          <li><a href="#problem">01 The Problem</a></li>
+          <li><a href="#solutions">02 Solutions</a></li>
+          <li><a href="#policy">03 Policy</a></li>
+          <li><a href="#support">04 Support</a></li>
+          <li><a href="#campus">05 Campus</a></li>
+          <li><a href="#action">06 Take Action</a></li>
+          <li><a href="flyer.html" target="_blank">Flyer</a> · <a href="policy-brief.html" target="_blank">Policy brief</a></li>
         </ul>
       </div>
       <div>
@@ -478,13 +455,28 @@ Sincerely,
           <li><a href="https://www.epa.gov/greenerproducts/identifying-sustainable-food-service-and-food-service-ware" target="_blank" rel="noopener">EPA — Sustainable Food Service Ware</a></li>
         </ul>
       </div>
+      <div>
+        <h4>Photo credits (via Wikimedia Commons)</h4>
+        <ul class="credits">
+          <li>Bales of PET bottles — <a href="https://commons.wikimedia.org/wiki/File:Bales_of_PET_bottles_closeup.jpg" target="_blank" rel="noopener">Grendelkhan</a>, CC BY-SA 4.0</li>
+          <li>Entangled monk seal — <a href="https://commons.wikimedia.org/wiki/File:Hawaiian_monk_seal_entangled_in_derelict_fishing_net.png" target="_blank" rel="noopener">NOAA Fisheries</a>, public domain</li>
+          <li>Beach debris, Tenerife — <a href="https://commons.wikimedia.org/wiki/File:004_Beach_pollution_in_Tenerife_-_Atlantic_Ocean_beach_plastic_garbage_debris.jpg" target="_blank" rel="noopener">Tupungato</a>, CC BY 3.0</li>
+          <li>Glass containers — <a href="https://commons.wikimedia.org/wiki/File:Glass_food_storage_container_with_Easy_Find_Lids.jpg" target="_blank" rel="noopener">Rubbermaid Products</a>, CC BY 2.0</li>
+          <li>Laboratory — <a href="https://commons.wikimedia.org/wiki/File:Scientist_in_a_laboratory_Esculab.jpg" target="_blank" rel="noopener">Esculab</a>, CC0</li>
+          <li>Sorting plant — <a href="https://commons.wikimedia.org/wiki/File:STEINERT_UniSort_PR.jpg" target="_blank" rel="noopener">STEINERT</a>, CC BY 4.0</li>
+          <li>U.S. Capitol — <a href="https://commons.wikimedia.org/wiki/File:Capitol_at_Dusk_2.jpg" target="_blank" rel="noopener">Martin Falbisoner</a>, CC BY-SA 3.0</li>
+          <li>Student fair — <a href="https://commons.wikimedia.org/wiki/File:2023_Warszawa_XX_Targi_K%C3%B3%C5%82_Naukowych_i_Organizacji_Studenckich_KONIK,_1.jpg" target="_blank" rel="noopener">Cybularny</a>, CC0</li>
+          <li>Town hall podium — <a href="https://commons.wikimedia.org/wiki/File:Town_Hall_with_Congressman_Huffman_(32672494664).jpg" target="_blank" rel="noopener">Fabrice Florin</a>, CC BY-SA 2.0</li>
+          <li>Seal rescue — <a href="https://commons.wikimedia.org/wiki/File:Seal_entangled_in_fishing_net_(7852752298).jpg" target="_blank" rel="noopener">NOAA Marine Debris Program</a>, public domain</li>
+          <li>Plastic bottles (flyer) — <a href="https://commons.wikimedia.org/wiki/File:Plastic_Bottles_-_Waste_(7992944072).jpg" target="_blank" rel="noopener">Tony Webster</a>, CC BY 2.0</li>
+        </ul>
+      </div>
     </div>
     <p class="disclaimer">Created for an AP Government classroom project. Sustainable Materials Alliance is a fictional interest group.</p>
   </div>
 </footer>
 
-<div class="presenter-hint" id="presenter-hint">← → to move between sections</div>
-
+<div class="presenter-hint" id="presenter-hint">← → move between sections</div>
 <script src="script.js"></script>
 </body>
 </html>

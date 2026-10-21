@@ -4,65 +4,60 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SMA Flyer — Campus Reuse Challenge</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <style>
     @page { size: letter; margin: 0; }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: "Inter", system-ui, sans-serif; background: #e9eee9; color: #1d2a24; }
+    :root { --paper: #f3efe6; --ink: #151713; --forest: #1d3a2b; --signal: #d7f24a; --muted: #6d7067; --rule: #cfc8b8; }
+    body { margin: 0; font-family: "Inter", system-ui, sans-serif; background: #d9d4c8; color: var(--ink); }
     .toolbar { display: flex; gap: 10px; justify-content: center; align-items: center; flex-wrap: wrap; padding: 16px; }
     .toolbar button, .toolbar a {
-      padding: 10px 18px; border-radius: 999px; border: 0; background: #0f8b8d; color: #fff;
-      font: inherit; font-weight: 700; cursor: pointer; text-decoration: none;
+      padding: 10px 18px; border-radius: 999px; border: 1.5px solid var(--ink); background: var(--ink); color: var(--paper);
+      font: 600 0.95rem "Inter", sans-serif; cursor: pointer; text-decoration: none;
     }
-    .toolbar a { background: #0f3d2e; }
-    .toolbar p { width: 100%; text-align: center; margin: 4px 0 0; font-size: 0.85rem; color: #5a6b63; }
+    .toolbar a { background: transparent; color: var(--ink); }
+    .toolbar p { width: 100%; text-align: center; margin: 4px 0 0; font-size: 0.85rem; color: #8a3b1c; }
 
-    .page {
-      width: 8.5in; height: 11in; margin: 0 auto 24px; background: #faf7f0; overflow: hidden;
-      display: flex; flex-direction: column; box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-    }
-    .top {
-      background: linear-gradient(160deg, #0f3d2e 0%, #1a5c44 60%, #0b6e70 100%);
-      color: #fff; padding: 0.6in 0.6in 0.5in;
-    }
-    .badge { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: #9fd8c4; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; }
-    .badge b { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: #0f8b8d; color: #fff; letter-spacing: 0.04em; }
-    h1 { font-size: 64px; line-height: 1; margin: 22px 0 14px; letter-spacing: -0.02em; }
-    .top p { font-size: 18px; margin: 0; color: #d6e8df; max-width: 6in; }
+    .page { width: 8.5in; height: 11in; margin: 0 auto 24px; background: var(--paper); overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
 
-    .body { padding: 0.45in 0.6in; flex: 1; display: flex; flex-direction: column; gap: 22px; }
-    .invite { font-size: 30px; font-weight: 800; color: #0f3d2e; line-height: 1.15; margin: 0; }
-    .invite span { color: #0f8b8d; }
-    .stat { display: flex; gap: 18px; align-items: center; padding: 16px 20px; border-radius: 14px; background: #e3efe8; }
-    .stat strong { font-size: 44px; color: #0f3d2e; line-height: 1; }
-    .stat p { margin: 0; font-size: 15px; }
-    .stat small { color: #5a6b63; }
+    .photo { position: relative; height: 5.3in; background: url("images/bottles.jpg") center 40% / cover; color: #fff; }
+    .photo::after { content: ""; position: absolute; inset: 0; background: rgba(12,16,12,0.42); }
+    .photo-inner { position: absolute; inset: 0; z-index: 1; padding: 0.45in 0.55in; display: flex; flex-direction: column; justify-content: space-between; }
+    .top-row { display: flex; justify-content: space-between; align-items: baseline; font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .top-row b { font-family: "Instrument Serif", serif; font-size: 30px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+    h1 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 92px; line-height: 0.86; letter-spacing: -0.03em; margin: 0; }
+    h1 em { color: var(--signal); }
+    .credit { position: absolute; right: 0.55in; bottom: 8px; z-index: 1; font-family: "JetBrains Mono", monospace; font-size: 7px; color: rgba(255,255,255,0.7); }
 
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .step { padding: 14px 16px; border-radius: 12px; border: 2px solid #d9e2dc; background: #fff; }
-    .step b { display: block; color: #0f8b8d; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
-    .step span { font-size: 15px; font-weight: 600; }
+    .body { flex: 1; padding: 0.4in 0.55in 0.3in; display: flex; flex-direction: column; }
+    .invite { font-family: "Instrument Serif", serif; font-size: 38px; line-height: 1.02; margin: 0 0 22px; }
+    .invite span { background: linear-gradient(transparent 58%, var(--signal) 58% 92%, transparent 92%); }
 
-    .roles { font-size: 15px; margin: 0; }
-    .roles b { color: #0f3d2e; }
+    .cols { display: grid; grid-template-columns: 1.15fr 1fr; gap: 0.35in; }
+    .steps { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--ink); }
+    .steps li { display: grid; grid-template-columns: 34px 1fr; padding: 9px 0; border-bottom: 1px solid var(--rule); font-size: 13.5px; }
+    .steps li b { font-family: "Instrument Serif", serif; font-size: 24px; font-weight: 400; line-height: 1; }
+    .steps li strong { display: block; font-size: 14px; }
+    .stat { border-top: 1.5px solid var(--ink); padding-top: 10px; }
+    .stat .n { font-family: "Instrument Serif", serif; font-size: 66px; line-height: 0.85; letter-spacing: -0.03em; }
+    .stat p { font-size: 13px; margin: 8px 0 0; }
+    .stat small { font-family: "JetBrains Mono", monospace; font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .roles { font-size: 12.5px; margin: 14px 0 0; color: #3b3f38; }
 
-    .bottom { display: flex; gap: 24px; align-items: center; margin-top: auto; padding: 20px; border-radius: 16px; background: #0f3d2e; color: #fff; }
-    .qr { flex: none; background: #fff; padding: 10px; border-radius: 10px; width: 150px; height: 150px; display: grid; place-items: center; }
-    .qr img, .qr canvas { width: 130px !important; height: 130px !important; }
-    .bottom h2 { margin: 0 0 6px; font-size: 24px; }
-    .bottom p { margin: 0; color: #d6e8df; font-size: 15px; }
-    .url { margin-top: 8px !important; color: #9fd8c4 !important; font-weight: 700; word-break: break-all; }
-    .disclaimer { text-align: center; font-size: 10px; color: #5a6b63; padding: 0 0.6in 0.3in; }
+    .bottom { margin-top: auto; display: grid; grid-template-columns: auto 1fr; gap: 0.3in; align-items: center; background: var(--forest); color: #fff; padding: 0.22in 0.28in; }
+    .qr { background: #fff; padding: 8px; width: 1.45in; height: 1.45in; display: grid; place-items: center; }
+    .qr img, .qr canvas { width: 100% !important; height: 100% !important; }
+    .bottom h2 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 34px; line-height: 1; margin: 0 0 8px; }
+    .bottom p { margin: 0; font-size: 13px; color: #cfd8cc; }
+    .url { margin-top: 10px !important; font-family: "JetBrains Mono", monospace; font-size: 11px !important; color: var(--signal) !important; word-break: break-all; }
+    .disclaimer { text-align: center; font-family: "JetBrains Mono", monospace; font-size: 8px; color: var(--muted); padding: 8px 0 0.22in; }
 
     @media print {
       body { background: #fff; }
       .toolbar { display: none; }
       .page { margin: 0; box-shadow: none; }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    }
-    @media screen and (max-width: 8.6in) {
-      .page { transform-origin: top left; }
     }
   </style>
 </head>
@@ -74,38 +69,41 @@
   </div>
 
   <div class="page">
-    <div class="top">
-      <div class="badge"><b>SMA</b> Sustainable Materials Alliance</div>
-      <h1>Progress<br>Beyond Plastic</h1>
-      <p>We advance sustainable materials, practical reuse systems, and effective recycling technologies through education and public policy.</p>
+    <div class="photo">
+      <div class="photo-inner">
+        <div class="top-row"><b>SMA</b><span>Sustainable Materials Alliance</span></div>
+        <h1>Progress<br><em>beyond</em> plastic.</h1>
+      </div>
+      <div class="credit">Photo: Tony Webster, CC BY 2.0</div>
     </div>
 
     <div class="body">
       <p class="invite">Join the <span>Campus Reuse Challenge</span> — help your campus measure its plastic waste and test a better way.</p>
 
-      <div class="stat">
-        <strong>8.7%</strong>
-        <p>of the 35.7 million tons of plastic in U.S. municipal solid waste was recycled in 2018.<br><small>Source: U.S. EPA</small></p>
+      <div class="cols">
+        <ol class="steps">
+          <li><b>1</b><div><strong>Measure</strong>Run an authorized dining-area waste audit</div></li>
+          <li><b>2</b><div><strong>Develop</strong>Propose a reusable-container pilot</div></li>
+          <li><b>3</b><div><strong>Advocate</strong>Take the evidence to campus leaders &amp; Congress</div></li>
+        </ol>
+        <div class="stat">
+          <div class="n">8.7%</div>
+          <p>of the 35.7 million tons of plastic in U.S. municipal solid waste was recycled.</p>
+          <small>Source: U.S. EPA, 2018 data</small>
+          <p class="roles"><strong>Find your role:</strong> research · outreach · design · policy &amp; advocacy</p>
+        </div>
       </div>
 
-      <div class="steps">
-        <div class="step"><b>1 · Measure</b><span>Run an authorized dining-area waste audit</span></div>
-        <div class="step"><b>2 · Develop</b><span>Propose a reusable-container pilot</span></div>
-        <div class="step"><b>3 · Advocate</b><span>Take the evidence to campus leaders &amp; Congress</span></div>
-      </div>
-
-      <p class="roles"><b>Find your role:</b> research &amp; data collection · events &amp; outreach · design &amp; communications · policy &amp; advocacy. Small time commitments, real results.</p>
-
-      <div class="bottom">
+      <div class="bottom" style="margin-top:22px">
         <div class="qr" id="qr"></div>
         <div>
-          <h2>Scan to get involved</h2>
-          <p>Learn about our policy agenda, copy our advocacy letter, and sign up for the challenge.</p>
+          <h2>Scan to get involved.</h2>
+          <p>Read our policy agenda, copy our letter to Congress, and sign up for the challenge.</p>
           <p class="url" id="site-url"></p>
         </div>
       </div>
+      <div class="disclaimer">Created for an AP Government classroom project. Sustainable Materials Alliance is a fictional interest group.</div>
     </div>
-    <div class="disclaimer">Created for an AP Government classroom project. Sustainable Materials Alliance is a fictional interest group.</div>
   </div>
 
   <script>
@@ -114,10 +112,10 @@
     const base = params.get("url") || location.href.replace(/flyer\.html.*$/, "");
     const target = base.replace(/\/?$/, "/") + "#campus";
     document.getElementById("site-url").textContent = target.replace(/^https?:\/\//, "");
-    new QRCode(document.getElementById("qr"), { text: target, width: 260, height: 260, colorDark: "#0f3d2e", colorLight: "#ffffff" });
-    if (location.protocol === "file:" && !params.get("url")) {
+    new QRCode(document.getElementById("qr"), { text: target, width: 300, height: 300, colorDark: "#151713", colorLight: "#ffffff" });
+    if (/^(file:|http:\/\/(localhost|127\.))/.test(location.href) && !params.get("url")) {
       document.getElementById("qr-note").textContent =
-        "Heads up: you're viewing a local file, so the QR code points to your computer. Open this flyer from the hosted website before printing.";
+        "Heads up: you're viewing a local copy, so the QR code won't work on phones. Print this from the hosted website (or add ?url=https://your-site/ to this page's address).";
     }
   </script>
 </body>

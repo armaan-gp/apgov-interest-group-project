@@ -1,12 +1,20 @@
-// Mobile nav toggle
+// Nav: transparent over the hero, solid once scrolled
+const nav = document.getElementById("nav");
+const hero = document.querySelector(".hero");
+const setNav = () => nav.classList.toggle("solid", window.scrollY > hero.offsetHeight - 80);
+setNav();
+window.addEventListener("scroll", setNav, { passive: true });
+
+// Mobile menu
 const toggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".nav-links");
 toggle.addEventListener("click", () => {
   const open = links.classList.toggle("open");
   toggle.setAttribute("aria-expanded", open);
+  nav.classList.add("solid");
 });
 links.addEventListener("click", (e) => {
-  if (e.target.tagName === "A") links.classList.remove("open");
+  if (e.target.closest("a")) links.classList.remove("open");
 });
 
 // 100-square waffle chart: 8.7% recycled ≈ 9 squares
@@ -17,22 +25,22 @@ for (let i = 0; i < 100; i++) {
   waffle.appendChild(sq);
 }
 
-// Reveal-on-scroll and budget bar animation
+// Reveal on scroll; grow the spending bar when it appears
+const stack = document.getElementById("stack");
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
     entry.target.classList.add("visible");
-    entry.target.querySelectorAll(".bar-fill").forEach((bar) => {
-      const total = Number(bar.closest(".bar-list").dataset.total);
-      bar.style.width = (Number(bar.dataset.value) / total) * 100 + "%";
-    });
+    if (entry.target.contains(stack)) {
+      stack.querySelectorAll("div").forEach((seg) => (seg.style.flexGrow = seg.dataset.value));
+    }
     observer.unobserve(entry.target);
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.12 });
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
 // Highlight the nav link for the section on screen
-const sections = [...document.querySelectorAll("main section")];
+const sections = [...document.querySelectorAll("[data-section]")];
 const navLinks = [...document.querySelectorAll(".nav-links a")];
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -49,18 +57,18 @@ document.getElementById("donate-demo").addEventListener("click", () => {
 
 // Copy sample letter
 document.getElementById("copy-letter").addEventListener("click", async () => {
-  const text = document.getElementById("letter-text").innerText;
+  const letter = document.getElementById("letter-text");
   const status = document.getElementById("copy-status");
   try {
-    await navigator.clipboard.writeText(text);
-    status.textContent = "Copied! Paste it into an email or letter.";
+    await navigator.clipboard.writeText(letter.innerText);
+    status.textContent = "Copied — paste it into an email.";
   } catch {
     const range = document.createRange();
-    range.selectNodeContents(document.getElementById("letter-text"));
+    range.selectNodeContents(letter);
     const sel = window.getSelection();
     sel.removeAllRanges();
     sel.addRange(range);
-    status.textContent = "Text selected — press Ctrl/Cmd + C to copy.";
+    status.textContent = "Selected — press Ctrl/Cmd + C.";
   }
   setTimeout(() => (status.textContent = ""), 4000);
 });
