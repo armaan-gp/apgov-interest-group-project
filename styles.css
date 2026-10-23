@@ -32,9 +32,9 @@ figcaption, .caption { font-size: 0.82rem; color: var(--muted); margin-top: 8px;
 
 /* Nav */
 .nav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
-.nav-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; height: 60px; }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; height: 64px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text); text-decoration: none; }
-.mark { background: var(--accent); color: #fff; font-size: 0.75rem; letter-spacing: 0.06em; padding: 4px 7px; border-radius: 4px; }
+.logo { height: 44px; width: auto; }
 .nav-links { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
 .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
 .nav-links a:hover, .nav-links a.active { color: var(--text); }
@@ -118,19 +118,22 @@ td { padding: 10px 0; border-bottom: 1px solid var(--line); }
 td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
 tr.total td { font-weight: 600; border-bottom: 0; }
 
+/* Merch */
+.merch { margin-top: 56px; align-items: center; }
+.merch img { width: 100%; max-width: 480px; border-radius: 8px; }
+.merch h3 { font-size: 1.5rem; margin-bottom: 12px; }
+.merch-list { list-style: none; padding: 0; margin: 0 0 8px; }
+.merch-list li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.merch-list li span:last-child { font-weight: 600; font-variant-numeric: tabular-nums; }
+
 /* Campus */
 .steps { padding-left: 20px; margin: 0 0 16px; }
 .steps li { margin-bottom: 6px; }
 #campus h3 { margin-top: 24px; }
 .roles-list { columns: 2; padding-left: 20px; margin: 0 0 16px; color: var(--muted); }
 .campus-photo { border-radius: 6px; margin-top: 24px; aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
-.flyer { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
-.flyer img { width: 100%; border: 1px solid var(--line); border-radius: 6px; }
-.flyer-placeholder {
-  width: 100%; aspect-ratio: 8.5 / 11; display: grid; place-items: center;
-  border: 1px dashed var(--line); border-radius: 6px; color: var(--muted);
-}
-[hidden] { display: none !important; }
+.flyer { display: flex; flex-direction: column; gap: 4px; position: sticky; top: 88px; }
+.flyer img { width: 100%; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 12px 32px rgba(20, 40, 28, 0.12); }
 
 /* Letter */
 .letter-row { margin-top: 56px; }
